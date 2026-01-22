@@ -53,12 +53,24 @@
     body {
       background-color: #020617;
       color: #f8fafc;
-      overflow: hidden;
-      touch-action: none;
-      height: 100vh;
-      height: -webkit-fill-available;
-      position: fixed;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
       width: 100%;
+    }
+
+    /* Desktop'ta scroll gizle, mobilde göster */
+    @media (min-width: 768px) {
+      body {
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        overflow-y: auto;
+        overflow-x: hidden;
+        touch-action: manipulation;
+      }
     }
 
     .casino-felt {

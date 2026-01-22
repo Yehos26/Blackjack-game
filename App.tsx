@@ -309,7 +309,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="h-screen casino-felt flex flex-col p-2 md:p-6 relative overflow-hidden">
+    <div className="min-h-screen md:h-screen casino-felt flex flex-col p-2 md:p-6 relative overflow-x-hidden overflow-y-auto md:overflow-hidden">
       {/* Sidebar Rules */}
       <div className={`fixed inset-y-0 left-0 w-full sm:w-96 glass z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col ${showRules ? 'translate-x-0' : '-translate-x-full opacity-0 pointer-events-none'}`}>
         <div className="p-8 flex-grow overflow-y-auto">
